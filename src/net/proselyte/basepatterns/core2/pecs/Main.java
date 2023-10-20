@@ -1,7 +1,9 @@
 package net.proselyte.basepatterns.core2.pecs;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 
 /*
 Ковариантность и контрвариантность обобщенных типов Java
@@ -41,6 +43,8 @@ public class Main {
             }
     }
     public static void main(String[] args) {
+
+
         Fruit fruit = new Fruit();
         Citrus citrus = new Citrus();
         Orange orange = new Orange();
@@ -48,6 +52,7 @@ public class Main {
 
         ArrayList<Citrus> citrusArrays = new ArrayList<>();
         ArrayList<Orange> orangeArrays = new ArrayList<>();
+        Iterator<Orange> iterator = orangeArrays.iterator();
         /*
         Инвариантность - когда Arraylist-у присваивается ArrayList такого же типа(подставить в качестве параметра), нельзя наследников или потомков.
         Обобщенные классы являются инвариантными.
